@@ -1,0 +1,47 @@
+﻿
+        @{
+            ViewBag.Title = "PRODUCTOS";
+        }
+
+        @model IEnumerable<PracticaProducto.Models.Productos>
+
+        <table>
+            <tr>
+                <th>
+                   ID
+                </th>
+                <th></th>
+                <th>
+                    Descripcion
+                </th>
+                <th></th>
+                <th>
+                    Precio
+                </th>
+                <th></th>
+                
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+
+                    </td>
+                    <th></th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <th></th>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Precio)
+                    </td>
+                    <th></th>
+                    
+                    
+                </tr>
+            }
+        </table>
+   
